@@ -31,10 +31,10 @@ his is a simple terminal-based Java tool that validates **South African ID numbe
 git clone https://github.com/Anesipho-Mazaza/sa-id-validation.git
 cd sa-id-validation
 
-### 2. Run Unit Tests
+ 2. Run Unit Tests
 gradle test
 
-### 3. Build the Project
+3. Build the Project
 gradle build
 
 ### 4. Run the App
@@ -43,8 +43,10 @@ gradle build
 ### 📖 ID Format Overview
 Format: YYMMDD SSSS C A Z
 
+📖 ID Format Overview
+Format: YYMMDD SSSS C A Z
 
-### Segment	Description 
+Segment	Description
 YYMMDD	Birthdate (e.g. 920220 for 20 Feb 1992)
 SSSS	Gender sequence (0000–4999 = Female, 5000–9999 = Male)
 C	Citizenship (0 = SA citizen, 1 = permanent resident)
