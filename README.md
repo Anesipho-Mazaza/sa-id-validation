@@ -1,13 +1,7 @@
-# sa-id-validation
-his is a simple terminal-based Java tool that validates **South African ID numbers** based on structure and checksum logic. It uses **Test Driven Development (TDD)** principles and **JUnit 4** for unit testing.
+# South African ID Validation App
 
----
+This is a simple terminal-based Java tool that validates **South African ID numbers** and extracts details like date of birth, gender, citizenship, and age.
 
-## 🔍 Features
-
-- ✅ Validates **13-digit South African ID numbers**
-- ✅ Checks:
-  - Proper length (13 digits)
   - All numeric characters
   - Valid **Luhn algorithm** checksum
   - Valid **date of birth**
@@ -38,7 +32,24 @@ gradle test
 gradle build
 
 ### 4. Run the App
-./gradlew.bat :app:run
+
+**Important:** For interactive input, do NOT use `./gradlew run` or `./gradlew.bat :app:run`, as Gradle does not reliably support console input. Instead, run the app directly with Java after building:
+
+```
+java -cp app/build/classes/java/main sa_id_validation.App
+```
+
+You will see output like:
+```
+Testing with ID: 9202205001082
+The ID is valid!
+DOB 1992-02-20
+Gender Male
+Citizenship SA Citizen
+Age 33
+```
+
+If the ID is invalid, you will see an error message explaining why.
 
 ### 📖 ID Format Overview
 Format: YYMMDD SSSS C A Z
