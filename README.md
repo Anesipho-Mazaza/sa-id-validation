@@ -39,3 +39,14 @@ gradle build
 
 4. Run the App
 ./gradlew.bat :app:run
+
+## 📖 ID Format Overview
+Format: YYMMDD SSSS C A Z
+
+
+### Segment	Description 
+YYMMDD	Birthdate (e.g. 920220 for 20 Feb 1992)
+SSSS	Gender sequence (0000–4999 = Female, 5000–9999 = Male)
+C	Citizenship (0 = SA citizen, 1 = permanent resident)
+A	Usually 8 (legacy/reserved)
+Z	Checksum digit (Luhn algorithm)
