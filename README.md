@@ -22,3 +22,20 @@ his is a simple terminal-based Java tool that validates **South African ID numbe
 - Gradle (installed and on your system PATH)
 - Terminal / Command Prompt
 - (Optional) Git for cloning the repo
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Anesipho-Mazaza/sa-id-validation.git
+cd sa-id-validation
+
+2. Run Unit Tests
+gradle test
+
+3. Build the Project
+gradle build
+
+4. Run the App
+./gradlew.bat :app:run
