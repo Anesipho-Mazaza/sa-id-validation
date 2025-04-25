@@ -8,19 +8,31 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) {
-        String id = "9202205001082"; // Example valid ID
-        System.out.println("Testing with ID: " + id);
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter South African ID number: ");
+        String id = scanner.nextLine();
+        System.out.println("========================================");
+        System.out.println("      South African ID Validation");
+        System.out.println("========================================");
+        System.out.printf("ID Number   : %s\n", id);
         ValidateSaId.ValidationResult result = ValidateSaId.validateIdNumber(id);
         if (result.valid) {
-            String output = String.format(
-                "The ID is valid!\nDOB %s\nGender %s\nCitizenship %s\nAge %d",
-                result.birthdate, result.gender, result.citizenship, result.age
-            );
-            System.out.println(output);
+            System.out.println("Status      : VALID\n");
+            System.out.println("Details:");
+            System.out.printf("  - Date of Birth : %s\n", result.birthdate);
+            System.out.printf("  - Gender        : %s\n", result.gender);
+            System.out.printf("  - Citizenship   : %s\n", result.citizenship);
+            System.out.printf("  - Age           : %d\n", result.age);
         } else {
-            System.out.println("Invalid: " + result.reason);
+            System.out.println("Status      : INVALID\n");
+            System.out.println("Reason:");
+            System.out.printf("  - %s\n", result.reason);
         }
+        System.out.println("========================================");
+        scanner.close();
     }
 }
